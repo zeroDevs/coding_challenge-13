@@ -34,6 +34,7 @@ Working in teams is hard. You will have to make Pull Requests with your changes 
 ## How to get started?
 - Start making small Pull Requests wherever you think you can help. The Management team will be handling the project and adding the features/bugs that you create as they come.  
 - You can use the **#coding-challenge** channel on Discord to discuss anything related to this project.  
+- It's a good idea to let the community know what you are working on so there are no conflicts here: https://github.com/zeroDevs/coding_challenge-13/issues
 
 ## Who can participate?
 Anybody! Think of this as a playground where no matter what your skill level, you can contribute (see the Git and Github section of the Complete Web Developer in 2019: Zero to Mastery if this is your first time contributing to open source) to this project and nobody is going to yell at you if you make a mistake :)
