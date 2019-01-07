@@ -1,5 +1,5 @@
 import React from 'react';
-import DataSource from './DataSource';
+import DataSource from '../DataSource/DataSource';
 
 const Data = ({ chartData }) => {
     return (

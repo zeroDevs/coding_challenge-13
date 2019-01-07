@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import './App.css';
-import Header from './components/Header';
-import Navigation from './components/Navigation';
-import Chart from './components/Chart';
-import Rank from './components/Rank';
-import Newsletter from './components/Newsletter';
-import Data from './components/Data';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Navigation from './components/Navigation/Navigation';
+import Chart from './components/Chart/Chart';
+import Rank from './components/Rank/Rank';
+import Newsletter from './components/Newsletter/Newsletter';
+import Data from './components/Data/Data';
+import Footer from './components/Footer/Footer';
 import chartData from './data.json';
 
 //update variable below according to tabs
