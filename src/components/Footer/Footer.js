@@ -1,7 +1,7 @@
 import React from 'react';
 import './Footer.css';
-import wave from '../images/svg-bgs/bg-wave-desktop.svg';
-import logo from '../images/logo1alt.png';
+import wave from '../../images/svg-bgs/bg-wave-desktop.svg';
+import logo from '../../images/logo1alt.png';
 
 const Footer = () => {
     return (

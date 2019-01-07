@@ -1,6 +1,6 @@
 import React from 'react';
 import './Newsletter.css';
-import curve from '../images/svg-bgs/bg-whitewave-desktop.svg'
+import curve from '../../images/svg-bgs/bg-whitewave-desktop.svg'
 
 const Newsletter = () => {
     return (
