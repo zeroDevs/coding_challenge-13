@@ -6,13 +6,13 @@ import Adapter from "enzyme-adapter-react-16";
 Enzyme.configure({ adapter: new Adapter() });
 
 describe("App", () => {
-    it("renders without crashing", () => {
+    it("App renders without crashing", () => {
       const div = document.createElement("div");
       ReactDOM.render(<App />, div);
       ReactDOM.unmountComponentAtNode(div);
     });
 
-    test("has a valid snapshot", () => {
+    test("App has a valid snapshot", () => {
       const component = renderer.create(<App />);
       const tree = component.toJSON();
       expect(tree).toMatchSnapshot();
