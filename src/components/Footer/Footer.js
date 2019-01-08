@@ -3,6 +3,9 @@ import './Footer.css';
 import wave from '../../images/svg-bgs/bg-wave-desktop.svg';
 import logo from '../../images/logo1alt.png';
 
+const date = new Date();
+const year = date.getFullYear();
+
 const Footer = () => {
     return (
         <footer>
@@ -34,7 +37,7 @@ const Footer = () => {
             </div>
 
             <div className="copyright">
-                © 2018 FullStack Trends. All Rights Reserved
+                © {year} FullStack Trends. All Rights Reserved
             </div>
 
         </footer>

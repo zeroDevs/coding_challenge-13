@@ -1,0 +1,114 @@
+/* Color Variables */
+
+:root {
+  --one: #e24e42;
+  --two: #D9B310;
+  --three: #EB6E80;
+  --four: #008F95;
+  --five: #2B2A2A;
+}
+
+/* Fonts and Imports */
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Exo+2|Raleway|Ubuntu');
+
+body {
+  background-color: rgb(255, 255, 255);
+  background-image: url("./images/parallax.svg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.collapse.show {
+  background: #fff
+}
+.title {
+  font-family: 'Raleway', sans-serif;
+  margin-bottom: 25px;
+}
+
+.button-primary {
+  color: var(--one);
+  padding: 8px ;
+  border-radius: 15px;
+  border: 1px solid var(--one);
+  margin: 0 10px;
+  background: transparent;
+  cursor: pointer !important;
+  box-shadow:rgba(0,0,0,0.8) 0px 5px 15px,
+     inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+a .button-primary {
+  color: var(--one);
+  padding: 8px 30px;
+  border-radius: 15px;
+  border: 1px solid var(--one);
+  margin: 0 10px;
+  background: transparent;
+  cursor: pointer !important;
+  box-shadow:rgba(0,0,0,0.8) 0px 5px 15px,
+     inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+
+.button-primary:focus {
+  outline: 0;
+}
+
+.button-primary:hover, .active {
+  background-color: var(--three);
+  border-color: var(--three);
+  color: white;
+  text-decoration: none;
+}
+
+.trends {
+  width: 80vw;
+  margin: 30px auto;
+  padding: 50px 30px;
+  text-align: center;
+  background: #f0d6c886;
+  border: 1px solid #fff;
+  border-radius: 30px;
+  box-shadow:rgba(0,0,0,0.8) 0px 5px 15px,
+        inset rgba(0,0,0,0.15) 0px -10px 20px;
+}
+
+.chart-container {
+  position: relative; 
+  width:95%;
+  margin: 0 auto auto auto;
+  
+}
+
+h2 {
+  color: var(--one);
+  text-decoration: underline;
+}
+
+.svg-flip {
+  position: relative;
+  top: -1px;
+  -webkit-transform: rotate(180deg);
+  /* Chrome and other webkit browsers */
+  -moz-transform: rotate(180deg);
+  /* FF */
+  -o-transform: rotate(180deg);
+  /* Opera */
+  -ms-transform: rotate(180deg);
+  /* IE9 */
+  transform: rotate(180deg);
+  z-index: -1;
+}
+.zone {
+  text-align: center;
+  font-size: 10em;
+  border-radius: 4px;
+  border: 1px solid #bbb;
+  transition: all 0.3s linear;
+  
+}
+.zone:hover {
+
+  box-shadow: rgba(0,0,0,0.8) 0px 5px 15px, inset rgba(0,0,0,0.15) 0px -10px 20px;
+}

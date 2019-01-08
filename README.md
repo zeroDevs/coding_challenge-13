@@ -12,12 +12,12 @@ The reason for doing this is to:
 ## What is the Challenge?
 You have just been hired by a fast growing startup! www.fullstracktrends.com has hired you and a few other developers to "make their product great". However, there is some bad news: They do not have any idea how to help you. They simply say "Can you please make the code better so we can launch by the end of the month?" You start looking at the codebase (big shout out to @Matt @notAnkur and @Dhaval for setting up and creating this initial project). 
 
-Hmm...you see that it is a React project. How can you improve this codebase and contribute to this? This is a very common scenario when starting to work at a company. You are most likely not starting a project from scratch but instead, you are getting put on an existing proejct to work on new features, refactor code, and fix bugs. This is what we are going to practice in this coding challenge. 
+Hmm...you see that it is a React project. How can you improve this codebase and contribute to this? This is a very common scenario when starting to work at a company. You are most likely not starting a project from scratch but instead, you are getting put on an existing project to work on new features, refactor code, and fix bugs. This is what we are going to practice in this coding challenge. 
 
 You start looking at the code... first thing you do is:
 1. `git clone` this repository. 
 2. `npm install`
-3. `npm run `
+3. `npm start `
 
 Great, you have built the project locally! Now it's time to start impressing your bosses at fullstacktrends! What should you do first? It is up to you, they have give you some freedom, but looking at the code initially, there are several places you can help them:
 - There are a few bugs where `NaN` is shown on the website
