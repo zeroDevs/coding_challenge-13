@@ -23,6 +23,7 @@
 .smLogo > a > img {
     height: 40px;
     position: relative;
+    transition: 0.3s;
 }
 .logo-active{
     transition: height 0.3s;
