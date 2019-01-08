@@ -21,15 +21,15 @@ const dataExtractor = (catIndex) => {
     let supArray = [];
     let remArray = [];
 
-    for (let i = 0; i < chartData[catIndex].length; i++) {
-        lArray.push(chartData[catIndex][i].name);
-        dlArray.push(chartData[catIndex][i].devLove);
-        gArray.push(chartData[catIndex][i].gJobDemand);
-        usArray.push(chartData[catIndex][i].usJobDemand);
-        supArray.push(chartData[catIndex][i].supJobDemand);
-        remArray.push(chartData[catIndex][i].remJobDemand);
 
-    }
+    chartData[catIndex].map(technology => {
+        lArray.push(technology.name);
+        dlArray.push(technology.devLove);
+        gArray.push(technology.gJobDemand);
+        usArray.push(technology.usJobDemand);
+        supArray.push(technology.supJobDemand);
+        remArray.push(technology.remJobDemand);
+    })
 
     return ({
         langArray: lArray,
@@ -56,7 +56,7 @@ class App extends Component {
     }
 
     getData(currentSelection) {
-        const {langArray, gJobArray, usJobArray, supJobArray, remJobArray} = this.state.rawData;
+        const { langArray, gJobArray, usJobArray, supJobArray, remJobArray } = this.state.rawData;
         const cIndex = langArray.indexOf(currentSelection);
 
         this.setState({
@@ -89,17 +89,17 @@ class App extends Component {
         this.setState({
             rawData: dataExtractor(index)
         },
-        ()=>{
-            this.getData(this.state.rawData.langArray[0]);
-        })
+            () => {
+                this.getData(this.state.rawData.langArray[0]);
+            })
     }
 
     render() {
-        const {cData, rawData, currentTopic} = this.state;
+        const { cData, rawData, currentTopic } = this.state;
         return (
             <div id="top">
                 <Header />
-                <Navigation onNavClick={this.onNavClick}/>
+                <Navigation onNavClick={this.onNavClick} />
                 <section className="trends">
                     <h2 className="title">Top 5</h2>
                     <div className="chart-container">
