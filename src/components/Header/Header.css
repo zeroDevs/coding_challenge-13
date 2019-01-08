@@ -24,6 +24,9 @@
     height: 40px;
     position: relative;
 }
+.logo-active{
+    transition: height 0.3s;
+}
 
 .scroll > .nav-buttons {
     position: relative;
