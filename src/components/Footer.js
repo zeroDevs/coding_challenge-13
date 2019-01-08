@@ -34,7 +34,7 @@ const Footer = () => {
             </div>
 
             <div className="copyright">
-                © 2018 FullStack Trends. All Rights Reserved
+                © 2019 FullStack Trends. All Rights Reserved
             </div>
 
         </footer>
