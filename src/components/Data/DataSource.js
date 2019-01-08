@@ -1,7 +1,7 @@
 import React from 'react';
 import SourceChart from './SourceChart';
 import './DataSource.css';
-const images = require.context('../images', true);
+const images = require.context('../../images', true);
 
 const sources = ["angellist", "dice", "github", "hackernews", "hired", "indeed", "linkedin", "remoteco", "simplyhired", "stackoverflow", "stateofjs"]
 

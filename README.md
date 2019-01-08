@@ -10,7 +10,7 @@ The reason for doing this is to:
 - Give you experience working with others so that you can add it to your resume
 
 ## What is the Challenge?
-You have just been hired by a fast growing starup! www.fullstracktrends.com has hired you and a few other developers to "make their product great". However, there is some bad news: They do not have any idea how to help you. They simply say "Can you please make the code better so we can launch by the end of the month?" You start looking at the codebase (big shout out to @Matt @notAnkur and @Dhaval for setting up and creating this initial project). 
+You have just been hired by a fast growing startup! www.fullstracktrends.com has hired you and a few other developers to "make their product great". However, there is some bad news: They do not have any idea how to help you. They simply say "Can you please make the code better so we can launch by the end of the month?" You start looking at the codebase (big shout out to @Matt @notAnkur and @Dhaval for setting up and creating this initial project). 
 
 Hmm...you see that it is a React project. How can you improve this codebase and contribute to this? This is a very common scenario when starting to work at a company. You are most likely not starting a project from scratch but instead, you are getting put on an existing proejct to work on new features, refactor code, and fix bugs. This is what we are going to practice in this coding challenge. 
 
@@ -34,6 +34,7 @@ Working in teams is hard. You will have to make Pull Requests with your changes 
 ## How to get started?
 - Start making small Pull Requests wherever you think you can help. The Management team will be handling the project and adding the features/bugs that you create as they come.  
 - You can use the **#coding-challenge** channel on Discord to discuss anything related to this project.  
+- It's a good idea to let the community know what you are working on so there are no conflicts here: https://github.com/zeroDevs/coding_challenge-13/issues
 
 ## Who can participate?
 Anybody! Think of this as a playground where no matter what your skill level, you can contribute (see the Git and Github section of the Complete Web Developer in 2019: Zero to Mastery if this is your first time contributing to open source) to this project and nobody is going to yell at you if you make a mistake :)
