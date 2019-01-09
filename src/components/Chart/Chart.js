@@ -2,7 +2,7 @@ import React from 'react';
 import { Polar } from 'react-chartjs-2';
 import './Chart.css';
 
-const Chart = ({ data, legend }) => (
+const Chart = ({ data }) => (
   <div>
     {data === undefined ? (
       <h2>Loading...</h2>
@@ -19,7 +19,7 @@ const Chart = ({ data, legend }) => (
             },
           },
           legend: {
-            position: legend,
+            position: 'bottom',
           },
           tooltips: {
             callbacks: {
