@@ -15,10 +15,11 @@
 }
 
 .zone > img {
+  padding-top: 1.25rem;
   width: 60px;
   height: auto;
   margin-bottom: 230px;
-  align-content: center
+  align-content: center;
 }
 
 .more {
