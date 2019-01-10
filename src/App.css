@@ -1,85 +1,102 @@
 /* Color Variables */
 
 :root {
-  --one: #e24e42;
-  --two: #D9B310;
-  --three: #EB6E80;
-  --four: #008F95;
-  --five: #2B2A2A;
+    --one: #e24e42;
+    --two: #D9B310;
+    --three: #EB6E80;
+    --four: #008F95;
+    --five: #2B2A2A;
 }
 
 /* Fonts and Imports */
-@import url('https://fonts.googleapis.com/css?family=Comfortaa|Exo+2|Raleway|Ubuntu');
 
+@import url('https://fonts.googleapis.com/css?family=Comfortaa|Exo+2|Raleway|Ubuntu');
 body {
-  background-color: rgb(255, 255, 255);
-  background-image: url("./images/parallax.svg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+    background-color: rgb(255, 255, 255);
+    background-image: url("./images/parallax.svg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track {
+    /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+    -webkit-box-shadow: inset 0 0 6px rgba(231, 47, 1, 0.651);
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: var(--one);
+    outline: 1px solid var(--one);
 }
 .collapse.show {
-  background: #fff
+    background: #fff
 }
+
 .title {
-  font-family: 'Raleway', sans-serif;
-  margin-bottom: 25px;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 25px;
 }
 
 .button-primary {
-  color: var(--one);
-  padding: 8px 30px;
-  border-radius: 15px;
-  border: 1px solid var(--one);
-  margin: 0 10px;
-  background: transparent;
-  cursor: pointer !important;
+    color: var(--one);
+    padding: 8px 30px;
+    border-radius: 15px;
+    border: 1px solid var(--one);
+    margin: 0 10px;
+    background: transparent;
+    cursor: pointer !important;
 }
 
 .button-primary:focus {
-  outline: 0;
+    outline: 0;
 }
 
-.button-primary:hover, .active {
-  background-color: var(--three);
-  border-color: var(--three);
-  color: white;
-  text-decoration: none;
+.button-primary:hover,
+.button-primary.active {
+    background-color: var(--three);
+    border-color: var(--three);
+    color: white;
+    text-decoration: none;
 }
 
 .trends {
-  width: 80vw;
-  margin: 30px auto;
-  padding: 50px 30px;
-  text-align: center;
-  background: #f0d6c886;
-  border: 1px solid #fff;
-  border-radius: 30px
+    width: 80vw;
+    margin: 30px auto;
+    padding: 50px 30px;
+    text-align: center;
+    background: #f0d6c886;
+    border: 1px solid #fff;
+    border-radius: 30px
 }
 
 .chart-container {
-  position: relative; 
-  width:95%;
-  margin: 0 auto auto auto;
+    position: relative;
+    width: 95%;
+    margin: 0 auto auto auto;
 }
 
 h2 {
-  color: var(--one);
-  text-decoration: underline;
+    color: var(--one);
+    text-decoration: underline;
 }
 
 .svg-flip {
-  position: relative;
-  top: -1px;
-  -webkit-transform: rotate(180deg);
-  /* Chrome and other webkit browsers */
-  -moz-transform: rotate(180deg);
-  /* FF */
-  -o-transform: rotate(180deg);
-  /* Opera */
-  -ms-transform: rotate(180deg);
-  /* IE9 */
-  transform: rotate(180deg);
-  z-index: -1;
+    position: relative;
+    top: -1px;
+    -webkit-transform: rotate(180deg);
+    /* Chrome and other webkit browsers */
+    -moz-transform: rotate(180deg);
+    /* FF */
+    -o-transform: rotate(180deg);
+    /* Opera */
+    -ms-transform: rotate(180deg);
+    /* IE9 */
+    transform: rotate(180deg);
+    z-index: -1;
 }

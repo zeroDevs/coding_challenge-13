@@ -12,6 +12,9 @@ const Chart = ({ data, legend }) => (
         options={{
           maintainAspectRatio: true,
           responsive: true,
+          layout: {
+            padding: 10,
+          },
           scale: {
             ticks: {
               suggestedMin: 0,

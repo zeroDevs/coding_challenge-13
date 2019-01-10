@@ -14,15 +14,25 @@
     justify-items: center;
 }
 
+.zone {
+    position:relative;
+    text-align: center;
+    font-size:10em;
+    border-radius:4px;
+    border:1px solid #bbb;
+}
+
 .zone > img {
-  width: 60px;
-  height: auto;
-  margin-bottom: 180px;
-  align-content: center
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: auto;
 }
 
 .more {
-    font-size: 5rem;
+    font-size: 4rem;
     color: #fff;
     font-family: Helvetica;
 }
@@ -46,10 +56,48 @@
     flex-direction: column;
   }
   .container-grid {
-    width: auto;
+    width: 100%;
   }
   .source-chart {
-      margin-top: 0;
+    margin-top: 0;
+  }
+}
+
+/* IPhone 5/SE */
+@media only screen and (max-width: 320px), (max-height: 320px) {
+  .arrow2 {
+    display: none;
+  }
+  .container-grid .tooltip1:hover .top {
+    display: none;
+  }
+  .trends {
+    width: 96vw;  
+  }
+  .container-grid {
+    width: auto;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 70px);
+  }
+  .source-chart {
+    width: auto;
+  }
+  .more {
+    font-size: 3.8rem;
+    color: #fff;
+  }
+  .mb-4 {
+    margin: 1rem;
+  }
+} 
+
+/* Other devices */
+@media only screen and (max-width: 414px), (max-height: 414px) {
+  .arrow2 {
+    display: none;
+  }
+  .mb-4 {
+    margin: 1rem;
   }
 }
 
@@ -58,12 +106,7 @@ div > span {
     color: #fff;
 }
 
-.zone {
-    text-align: center;
-    font-size:10em;
-    border-radius:4px;
-    border:1px solid #bbb;
-}
+
 
 /***********************************************************************
  *  Purple Background
@@ -101,11 +144,18 @@ div > span {
     box-shadow:0 1px 8px rgba(0,0,0,0.5);
     display:none;
     border: 1px solid var(--three);
-    text-transform: uppercase
+    text-transform: uppercase;
+    animation: pop 0.2s;
+}
+
+@keyframes pop{
+  0%{transform:translate(-50%, -100%) scale(0);}
+  100%{transform:translate(-50%, -100%) scale(1);}
 }
 
 .tooltip1:hover .top {
     display:block;
+    transform:translate(-50%, -100%) scale(1);
 }
 
 .tooltip1 .top i {

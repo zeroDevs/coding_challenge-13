@@ -21,15 +21,15 @@ const dataExtractor = (catIndex) => {
     let supArray = [];
     let remArray = [];
 
+    for (let i = 0; i < chartData[catIndex].length; i++) {
+        lArray.push(chartData[catIndex][i].name);
+        dlArray.push(chartData[catIndex][i].devLove);
+        gArray.push(chartData[catIndex][i].gJobDemand);
+        usArray.push(chartData[catIndex][i].usJobDemand);
+        supArray.push(chartData[catIndex][i].supJobDemand);
+        remArray.push(chartData[catIndex][i].remJobDemand);
 
-    chartData[catIndex].map(technology => {
-        lArray.push(technology.name);
-        dlArray.push(technology.devLove);
-        gArray.push(technology.gJobDemand);
-        usArray.push(technology.usJobDemand);
-        supArray.push(technology.supJobDemand);
-        remArray.push(technology.remJobDemand);
-    })
+    }
 
     return ({
         langArray: lArray,
@@ -48,11 +48,21 @@ class App extends Component {
             cData: {},
             currentTopic: chartData[currentCatIndexGlobal][0].name,
             rawData: dataExtractor(currentCatIndexGlobal),
+            contributors: []
         }
+    }
+
+    fetchContributors = async () => {
+        await fetch('https://api.github.com/repos/zeroDevs/coding_challenge-13/contributors')
+            .then(res => res.json())
+            .then(json => this.setState({
+                contributors: json
+            }));
     }
 
     componentDidMount() {
         this.getData(this.state.currentTopic);
+        this.fetchContributors()
     }
 
     getData(currentSelection) {
@@ -95,11 +105,11 @@ class App extends Component {
     }
 
     render() {
-        const { cData, rawData, currentTopic } = this.state;
+        const { cData, rawData, currentTopic, contributors } = this.state;
         return (
             <div id="top">
                 <Header />
-                <Navigation onNavClick={this.onNavClick} />
+                <Navigation onNavClick={this.onNavClick} currentCategoryIndex={currentCatIndexGlobal} />
                 <section className="trends">
                     <h2 className="title">Top 5</h2>
                     <div className="chart-container">
@@ -110,7 +120,7 @@ class App extends Component {
                 </section>
                 <Newsletter />
                 <Data chartData={cData} location={false} />
-                <Footer />
+                <Footer contrib={contributors} />
             </div>
         );
     }

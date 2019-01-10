@@ -30,7 +30,6 @@ const DataSource = ({ chartData }) => (
           <img src={images(`./company/${c}.png`)} alt={`${c} logo`} width="150px" height="150px" />
         </div>
       ))}
-      )}
       <div className="zone purple tooltip1 text-center">
         <div className="top">
           <h5>Other</h5>

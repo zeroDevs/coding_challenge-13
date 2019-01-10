@@ -1,0 +1,43 @@
+.cFooterlink:hover {
+    cursor: pointer;
+}
+
+.contribCard {
+    border-radius: 5px 5px 10px 10px;
+    border: 1px solid rgba(80, 80, 80, 0.322);
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.664);
+}
+
+.contribCard:hover {
+    -webkit-box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.22);
+    box-shadow: 4px 4px 16px 0px rgba(0, 0, 0, 0.22);
+}
+
+.contribCard>p {
+    color: rgba(97, 97, 97, 0.589);
+}
+
+.contribCard h5 {
+    color: var(--three);
+    text-transform: uppercase;
+}
+
+.contribCard img {
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+}
+
+.modal-header h5 {
+    margin: 0px;
+}
+
+.modal-body {
+    background: url(../../images/parallax.svg);
+    margin: 0;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
