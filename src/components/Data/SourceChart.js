@@ -40,12 +40,13 @@ const SourceChart = () => (
               return data.datasets[0].data[tooltipItem.index];
             },
           },
-          backgroundColor: '#FFF',
-          titleFontSize: 16,
-          titleFontColor: '#0066ff',
-          bodyFontColor: '#000',
-          bodyFontSize: 14,
+          backgroundColor: 'rgba(0,0,0,0.7)',
+          titleFontSize: 12,
+          titleFontColor: '#fff',
+          bodyFontColor: '#fff',
+          bodyFontSize: 12,
           displayColors: false,
+          padding: 5,
         },
       }}
     />

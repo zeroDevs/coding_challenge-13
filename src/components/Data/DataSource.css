@@ -14,15 +14,43 @@
     justify-items: center;
 }
 
-.zone>img {
-    width: 60px;
+
+.zone {
+    position:relative;
+    text-align: center;
+    font-size:10em;
+    border-radius:4px;
+    border:1px solid #bbb;
+    background: #A88BEB;
+    box-sizing: border-box;
+    /* Old browsers */
+    background: -moz-linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #A88BEB), color-stop(44%, #F1A7F1), color-stop(100%, #F8CEEC));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
+}
+
+.zone > img {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
     height: auto;
-    margin-bottom: 230px;
-    align-content: center
+    padding: 5%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .more {
-    font-size: 5rem;
+    font-size: 4rem;
     color: #fff;
     font-family: Helvetica;
 }
@@ -39,6 +67,7 @@
 .source-chart {
     margin-top: 40px;
 }
+
 
 /* Animated Arrow */
 
@@ -263,12 +292,83 @@
 }
 
 
-
-
-div>span {
-    font-size: 10rem;
-    color: #fff;
+.mb-4, my-4 {
+    margin-bottom: 1rem !important;
 }
+
+@media only screen and (max-width: 620px){
+  .zone > img {
+    width: 80.500%;
+  }
+}
+
+@media only screen and (min-width: 620px) and (max-width: 760px){
+    .zone > img {
+      width: 75.500%;
+  }
+}
+@media only screen and (min-width: 760px) and (max-width: 1110px){
+  .zone > img {
+    width: 50.500%;
+}
+}
+@media only screen and (min-width: 1110px){
+  .zone > img {
+    width: 60.500%;
+}
+}
+@media only screen and (max-width: 1110px) {
+  .arrow {
+    display: none;
+  }
+  .arrow2 {
+    display: flex;
+  }
+  .wrapper-data {
+    flex-direction: column;
+  }
+  .container-grid {
+    width: 100%;
+  }
+  .source-chart {
+    margin-top: 0;
+  }
+}
+
+/* IPhone 5/SE */
+@media only screen and (max-width: 320px), (max-height: 320px) {
+  .arrow2 {
+    display: none;
+  }
+  .container-grid .tooltip1:hover .top {
+    display: none;
+  }
+  .trends {
+    width: 96vw;  
+  }
+  .trends p {
+    margin-bottom: 1.5rem;
+  }
+  .title {
+    font-size: 1.7rem;
+  }
+  .container-grid {
+    width: auto;
+    grid-gap: 1px;
+    grid-template-columns: repeat(4, 70px);
+  }
+  .source-chart {
+    width: auto;
+  }
+  .more {
+    font-size: 3.8rem;
+    color: #fff;
+  }
+  .mb-4 {
+    margin: 1rem;
+  }
+} 
+
 
 .zone {
     text-align: center;
@@ -295,6 +395,20 @@ div>span {
     /* IE10+ */
     background: linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
     /* W3C */
+  
+/* Other devices */
+@media only screen and (max-width: 414px), (max-height: 414px) {
+  .arrow2 {
+    display: none;
+  }
+  .mb-4 {
+    margin: 1rem;
+  }
+}
+
+div>span {
+    font-size: 10rem;
+    color: #fff;
 }
 
 .tooltip1 {
@@ -320,11 +434,18 @@ div>span {
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
     display: none;
     border: 1px solid var(--three);
-    text-transform: uppercase
+    text-transform: uppercase;
+    animation: pop 0.2s;
+}
+
+@keyframes pop{
+  0%{transform:translate(-50%, -100%) scale(0);}
+  100%{transform:translate(-50%, -100%) scale(1);}
 }
 
 .tooltip1:hover .top {
-    display: block;
+    display:block;
+    transform:translate(-50%, -100%) scale(1);
 }
 
 .tooltip1 .top i {
@@ -347,3 +468,4 @@ div>span {
     background-color: var(--three);
     box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
+

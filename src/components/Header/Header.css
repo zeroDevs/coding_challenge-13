@@ -3,41 +3,52 @@
     padding: 15px;
 }
 
+.button-primary {
+    transition: all 0.4s;
+}
+
+#header {
+    transition: all 0.4s;
+}
+
 #header a {
     color: var(--three);
-    margin-bottom: 7px;
 }
 
 #header .active {
-    color: #fff
+    color: #fff;
 }
 
 #header a:hover {
     color: #fff
 }
 
-.logo-active{
+.logo-active {
     transition: height 0.3s;
+    cursor: pointer;
 }
 
 .scroll {
-    background: rgba(255, 255, 255, 1);
-    height: 65px
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 2px var(--three);
+    height: 65px;
 }
 
-.smLogo > a > img {
+.smLogo>a>img {
     height: 40px;
     position: relative;
     transition: 0.3s;
 }
 
-.scroll > .nav-buttons {
+.scroll>.nav-buttons {
     position: relative;
 }
 
-
-  @media only screen and (max-width: 800px) {
+@media only screen and (max-width: 991px) {
     #header {
-        background: #fff
+        background: rgba(255, 255, 255, 0.9);
+    }
+    .nav-buttons a:first-child {
+        margin-bottom: 7px;
     }
 }

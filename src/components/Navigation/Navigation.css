@@ -10,5 +10,10 @@
 
 .center > div > button {
     width: 80%;
-    background: rgba(255, 255, 255, 0.219)
+    background: rgba(255, 255, 255, 0.219);
+}
+@media only screen and (min-width: 576px) and (max-width: 768px){
+    .center > div > button {
+        width: 120px !important;
+    }
 }

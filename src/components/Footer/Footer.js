@@ -2,11 +2,11 @@ import React from 'react';
 import './Footer.css';
 import wave from '../../images/svg-bgs/bg-wave-desktop.svg';
 import logo from '../../images/logo1alt.png';
-import Contrib from './contributors.js';
+import Contrib from './contributors';
 
 const Footer = ({ contrib }) => (
   <footer>
-    <img src={wave} alt="" style={{ width: '100%' }} />
+    <img src={wave} alt="" style={{ width: '100%' }} className="footer-wave" />
     <div className="footer py-5">
       <div className="container">
         <div className="row">
@@ -14,23 +14,23 @@ const Footer = ({ contrib }) => (
             <a className="navbar-brand pb-3" href="/#">
               <img src={logo} alt="logo" height="50" />
             </a>
-            <p className="text-muted text-justify">
-              Dedicated to monitoring the top 5 job demands in the 5 categories: Web, Mobile,
+            <p className="text-muted text-left">
+              Dedicated to monitoring the top 5 job demands in the 4 categories: Web, Mobile,
               Programming Languages, Backend
             </p>
             <div className="socials text-white pt-2">
               <a href="https://medium.com/zerotomastery" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-medium" />
+                <i className="grow fab fa-medium" />
               </a>
               <a href="https://twitter.com/AndreiNeagoie" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-twitter-square" />
+                <i className="grow fab fa-twitter-square" />
               </a>
               <a
                 href="https://github.com/zero-to-mastery"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <i className="fab fa-github-square" />
+                <i className="grow fab fa-github-square" />
               </a>
             </div>
           </div>
@@ -43,25 +43,27 @@ const Footer = ({ contrib }) => (
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <li>Zero To Mastery</li>
+                <li className="grow">Zero To Mastery</li>
               </a>
               <a href="https://github.com/anantankur" target="_blank" rel="noopener noreferrer">
-                <li>Ankur Anant</li>
+                <li className="grow">Ankur Anant</li>
               </a>
               <a href="https://github.com/Dhaval1403" target="_blank" rel="noopener noreferrer">
-                <li>Dhaval Mehta</li>
+                <li className="grow">Dhaval Mehta</li>
               </a>
               <a href="https://github.com/MattCSmith" target="_blank" rel="noopener noreferrer">
-                <li>Matt Smith</li>
+                <li className="grow">Matt Smith</li>
               </a>
-              <Contrib contributors={contrib}/>
+              <Contrib contributors={contrib} />
             </ul>
           </div>
         </div>
       </div>
     </div>
 
-    <div className="copyright">© {new Date().getFullYear()} FullStack Trends. All Rights Reserved</div>
+    <div className="copyright">
+      © {new Date().getFullYear()} FullStack Trends. All Rights Reserved
+    </div>
   </footer>
 );
 

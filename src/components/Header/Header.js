@@ -1,7 +1,7 @@
 import React from 'react';
-import logo from '../../images/logo1.png';
-import './Header.css';
 import { Link } from 'react-scroll';
+import './Header.css';
+import logo from '../../images/logo1.png';
 
 const Header = () => (
   <section>

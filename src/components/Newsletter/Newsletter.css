@@ -23,3 +23,6 @@
     text-align: center!important;
     margin-bottom: 30px!important
 }
+.ml-form-embedSubmit button{
+    cursor: pointer !important;
+}

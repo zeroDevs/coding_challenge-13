@@ -38,6 +38,9 @@ footer .socials i:hover {
     color: #ffffff;
 }
 
+.footer-wave{
+    transform: translateY(4px);
+}
 
 @media only screen and (max-width: 800px) {
     .footer {

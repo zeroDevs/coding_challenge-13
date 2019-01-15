@@ -1,0 +1,15 @@
+.chart-wrapper {
+  height: 350px;
+}
+
+@media only screen and (min-width: 400px) {
+  .chart-wrapper {
+    height: 400px;
+  }
+}
+
+@media only screen and (min-width: 520px) {
+  .chart-wrapper {
+    height: 600px;
+  }
+}

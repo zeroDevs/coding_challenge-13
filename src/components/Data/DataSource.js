@@ -21,13 +21,14 @@ const sources = [
 const DataSource = ({ chartData }) => (
   <div className="wrapper-data">
     <div className="container-grid">
-      { sources.map((c, i) => (
-        <div key={ i } className="zone purple tooltip1 text-center">
+      {sources.map((c, i) => (
+        <div key={i} className="zone tooltip1 text-center">
           <div className="top">
             <h5>{ c }</h5>
             <i />
           </div>
-          <img src={ images(`./company/${c}.png`) } alt={ `${c} logo` } width="150px" height="150px" />
+
+          <img src={images(`./company/${c}.png`)} alt={`${c} logo`} />
         </div>
       )) }
       <div className="zone purple tooltip1 text-center">

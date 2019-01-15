@@ -1,0 +1,51 @@
+.tooltipTrigger:hover .tooltipTextContainer {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tooltipTextContainer {
+    position: absolute;
+    width: 25%;
+    min-width: 300px;
+}
+
+.tooltipText {
+    background-color: rgba(0, 0, 0, .85);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.tooltipTrigger {
+    display: flex;
+    flex-direction: column;
+}
+
+.tooltipTrigger.bottom .tooltipTextContainer {
+    top: 135px;
+    left: 0;
+}
+
+.arrow-bottom {
+    border-width: 0 10px 10px 10px;
+    border-color: transparent;
+    border-bottom-color: rgba(0, 0, 0, .85);
+    border-style: solid;
+}
+
+@media only screen and (min-width: 568px) {
+    .tooltipTrigger {
+        flex-direction: row;
+    }
+    .tooltipTrigger.bottom .tooltipTextContainer {
+        top: 50px;
+        left: auto;
+    }
+}
+
+.tooltipContainer {
+    display: flex;
+    position: relative;
+    justify-content: center;
+}
