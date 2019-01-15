@@ -14,11 +14,11 @@
     justify-items: center;
 }
 
-.zone > img {
-  width: 60px;
-  height: auto;
-  margin-bottom: 230px;
-  align-content: center
+.zone>img {
+    width: 60px;
+    height: auto;
+    margin-bottom: 230px;
+    align-content: center
 }
 
 .more {
@@ -27,7 +27,12 @@
     font-family: Helvetica;
 }
 
-.arrow2 {
+.arrowAnim-right {
+    padding-left: 3rem;
+    padding-right: 7rem;
+}
+
+.arrowAnim-down {
     display: none;
 }
 
@@ -35,96 +40,310 @@
     margin-top: 40px;
 }
 
-@media only screen and (max-width: 1110px) {
-  .arrow {
-    display: none;
-  }
-  .arrow2 {
-    display: flex;
-  }
-  .wrapper-data {
-    flex-direction: column;
-  }
-  .container-grid {
-    width: auto;
-  }
-  .source-chart {
-      margin-top: 0;
-  }
+/* Animated Arrow */
+
+.arrow-down {
+    width: 3rem;
+    height: 3rem;
+    border: 0.2rem solid;
+    border-color: white transparent transparent white;
+    transform: rotate(-135deg);
 }
 
-div > span {
+.arrow-right {
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0.2rem solid;
+    border-color: white transparent transparent white;
+    transform: rotate(135deg);
+}
+
+
+.arrowSlideDown {
+    position: absolute;
+    -webkit-animation: slide-down 2s linear infinite;
+    animation: slide-down 2s linear infinite;
+}
+
+.arrowSlideRight {
+    position: absolute;
+    -webkit-animation: slide-right 2s linear infinite;
+    animation: slide-right 2s linear infinite;
+}
+
+.delay1 {
+    -webkit-animation-delay: 0.5s;
+    animation-delay: 0.5s;
+}
+
+.delay2 {
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+}
+
+.delay3 {
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+}
+
+@-webkit-keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(-2rem);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(2rem);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+}
+
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-3rem);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateY(-2rem);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateY(2rem);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+}
+
+
+
+
+@-webkit-keyframes slide-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-4rem);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(-2rem);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(2rem);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(4rem);
+    }
+}
+
+@keyframes slide-right {
+    0% {
+        opacity: 0;
+        transform: translateX(-4rem);
+    }
+
+    20% {
+        opacity: 1;
+        transform: translateX(-2rem);
+    }
+
+    80% {
+        opacity: 1;
+        transform: translateX(2rem);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(4rem);
+    }
+}
+
+/* originally authored by Nick Pettit - https://github.com/nickpettit/glide */
+
+@-webkit-keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes pulse {
+    from {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+
+    50% {
+        -webkit-transform: scale3d(1.05, 1.05, 1.05);
+        transform: scale3d(1.05, 1.05, 1.05);
+    }
+
+    to {
+        -webkit-transform: scale3d(1, 1, 1);
+        transform: scale3d(1, 1, 1);
+    }
+}
+
+.pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+}
+
+.animated {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+
+.animated.infinite {
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+@media only screen and (max-width: 1110px) {
+    .arrowAnim-right {
+        display: none;
+    }
+
+    .arrowAnim-down {
+        padding: 5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .wrapper-data {
+        flex-direction: column;
+    }
+
+    .container-grid {
+        width: auto;
+    }
+
+    .source-chart {
+        margin-top: 0;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .arrowAnim-down {
+        padding: 4rem 0 6.5rem 0;
+    }
+}
+
+
+
+
+div>span {
     font-size: 10rem;
     color: #fff;
 }
 
 .zone {
     text-align: center;
-    font-size:10em;
-    border-radius:4px;
-    border:1px solid #bbb;
+    font-size: 10em;
+    border-radius: 4px;
+    border: 1px solid #bbb;
 }
 
 /***********************************************************************
  *  Purple Background
  **********************************************************************/
 .purple {
-    background: #A88BEB; /* Old browsers */
-    background: -moz-linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#A88BEB), color-stop(44%,#F1A7F1), color-stop(100%,#F8CEEC)); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(to bottom, #A88BEB 0%,#F1A7F1 44%,#F8CEEC 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(to bottom, #A88BEB 0%,#F1A7F1 44%,#F8CEEC 100%); /* Opera 11.10+ */
-    background: -ms-linear-gradient(to bottom, #A88BEB 0%,#F1A7F1 44%,#F8CEEC 100%); /* IE10+ */
-    background: linear-gradient(to bottom, #A88BEB 0%,#F1A7F1 44%,#F8CEEC 100%); /* W3C */
+    background: #A88BEB;
+    /* Old browsers */
+    background: -moz-linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
+    /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #A88BEB), color-stop(44%, #F1A7F1), color-stop(100%, #F8CEEC));
+    /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
+    /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
+    /* Opera 11.10+ */
+    background: -ms-linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
+    /* IE10+ */
+    background: linear-gradient(to bottom, #A88BEB 0%, #F1A7F1 44%, #F8CEEC 100%);
+    /* W3C */
 }
 
 .tooltip1 {
-    display:inline-block;
-    position:relative;
-    text-align:left;
+    display: inline-block;
+    position: relative;
+    text-align: left;
 }
 
 .tooltip1 .top {
-    min-width:200px;
-    top:-20px;
-    left:50%;
-    transform:translate(-50%, -100%);
-    padding:10px 0 5px 0;
-    color:var(--three);
-    background-color:rgba(255, 255, 255, 0.95);
-    font-weight:normal;
-    font-size:13px;
-    border-radius:8px;
-    position:absolute;
-    z-index:99999999;
-    box-sizing:border-box;
-    box-shadow:0 1px 8px rgba(0,0,0,0.5);
-    display:none;
+    min-width: 200px;
+    top: -20px;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    padding: 10px 0 5px 0;
+    color: var(--three);
+    background-color: rgba(255, 255, 255, 0.95);
+    font-weight: normal;
+    font-size: 13px;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 99999999;
+    box-sizing: border-box;
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    display: none;
     border: 1px solid var(--three);
     text-transform: uppercase
 }
 
 .tooltip1:hover .top {
-    display:block;
+    display: block;
 }
 
 .tooltip1 .top i {
-    position:absolute;
-    top:100%;
-    left:50%;
-    margin-left:-12px;
-    width:24px;
-    height:12px;
-    overflow:hidden;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -12px;
+    width: 24px;
+    height: 12px;
+    overflow: hidden;
 }
 
 .tooltip1 .top i::after {
-    content:'';
-    position:absolute;
-    width:12px;
-    height:12px;
-    left:50%;
-    transform:translate(-50%,-50%) rotate(45deg);
-    background-color:var(--three);
-    box-shadow:0 1px 8px rgba(0,0,0,0.5);
+    content: '';
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    background-color: var(--three);
+    box-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
 }
