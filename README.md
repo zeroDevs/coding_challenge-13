@@ -56,7 +56,10 @@ Thanks goes to these wonderful people ([emoji key](https://github.com/all-contri
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore -->
+
 | [<img src="https://avatars0.githubusercontent.com/u/26633429?v=4" width="100px;" alt="David Sima"/><br /><sub><b>David Sima</b></sub>](https://github.com/The24thDS)<br />[🐛](https://github.com/zeroDevs/coding_challenge-13/issues?q=author%3AThe24thDS "Bug reports") | [<img src="https://avatars0.githubusercontent.com/u/39712415?v=4" width="100px;" alt="Akinwunmi Aguda"/><br /><sub><b>Akinwunmi Aguda</b></sub>](https://github.com/AkinAguda)<br />[🐛](https://github.com/zeroDevs/coding_challenge-13/issues?q=author%3AAkinAguda "Bug reports") |
+| [<img src="https://avatars0.githubusercontent.com/u/26633429?v=4" width="100px;" alt="David Sima"/><br /><sub><b>David Sima</b></sub>](https://github.com/The24thDS)<br />[🐛](https://github.com/zeroDevs/coding_challenge-13/issues?q=author%3AThe24thDS "Bug reports") | [<img src="https://avatars1.githubusercontent.com/u/31483629?v=4" width="100px;" alt="Mike Perry Y Attara"/><br /><sub><b>Mike Perry Y Attara</b></sub>](https://mikeattara.com)<br />[🤔](#ideas-mikeattara "Ideas, Planning, & Feedback") [💻](https://github.com/zeroDevs/coding_challenge-13/commits?author=mikeattara "Code") |
+
 | :---: | :---: |
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
