@@ -17,6 +17,15 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "MattCSmith",
+      "name": "Matt Smith",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/6190356?v=4",
+      "profile": "https://github.com/MattCSmith",
+      "contributions": [
+        "bug"
+      ]
     }
   ],
   "contributorsPerLine": 7
