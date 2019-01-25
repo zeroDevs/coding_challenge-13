@@ -17,6 +17,16 @@
       "contributions": [
         "bug"
       ]
+    },
+    {
+      "login": "Feythelus",
+      "name": "Feythelus",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/30155412?v=4",
+      "profile": "https://github.com/Feythelus",
+      "contributions": [
+        "bug",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7
