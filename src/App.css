@@ -146,6 +146,19 @@ h2 {
 }
 
 .toolbox {
+  display: grid;
   max-height: 150px;
   margin-bottom: 24px;
+  justify-content: center;
+}
+
+.zoomSlider {
+  display: grid;
+  grid-template-columns: 1fr 5fr 1fr;
+  width: 100px;
+}
+
+.zoomSlider>span {
+  font-size: 1.5em;
+  color: #2B2A2A;
 }

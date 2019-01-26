@@ -168,7 +168,7 @@ class App extends Component {
     }
 
     render() {
-        const { cData, rawData, currentTopic, contributors, chartChoice} = this.state;
+        const { cData, rawData, currentTopic, contributors, chartChoice, zoomLevel, minimZoom} = this.state;
         return (
             <div id="top" ref={(ref) => this.scrollIcon = ref}>
                 <Header />
@@ -185,8 +185,12 @@ class App extends Component {
                             <div className="toolbox">
                                 <p>Chart type</p>
                                 <Switch onClick={this.changeChart} leftText="Polar" rightText="Radar" />
+                                <p>Zoom</p>
+                                <div className="zoomSlider">
+                                    <span>-</span><input type="range" min="1" max={ minimZoom } step="1" onChange={ this.zoom }/><span>+</span>
+                                </div>
                             </div>
-                            <Chart data={cData} type={chartChoice} />
+                            <Chart data={cData} type={chartChoice}  zoomLevel={ zoomLevel }/>
                         </div>
                     </div>
                 </section>
