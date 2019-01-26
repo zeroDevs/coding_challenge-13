@@ -7,7 +7,7 @@ const Contrib = ({ contributors }) => {
     <div className="cFooterlink" data-toggle="modal" data-target="#contribModal">
       <li>& {contributors.length} Contributors</li>
     </div>
-    
+
     <div
       className="modal fade"
       id="contribModal"
@@ -27,7 +27,7 @@ const Contrib = ({ contributors }) => {
             </button>
           </div>
           <div className="modal-body row">
-            {contributors.map((user,index) => {
+              {contributors.map((user, index) => {
               const prevContributions = {
                 MattCSmith: 74,
                 aneagoie: 30,
@@ -67,5 +67,5 @@ const Contrib = ({ contributors }) => {
     </div>
   );
 };
-     
+
 export default Contrib;
