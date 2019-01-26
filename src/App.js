@@ -168,7 +168,7 @@ class App extends Component {
     }
 
     render() {
-        const { cData, rawData, currentTopic, contributors, chartChoice, zoomLevel, minimZoom } = this.state;
+        const { cData, rawData, currentTopic, contributors, chartChoice} = this.state;
         return (
             <div id="top" ref={(ref) => this.scrollIcon = ref}>
                 <Header />
@@ -186,7 +186,7 @@ class App extends Component {
                                 <p>Chart type</p>
                                 <Switch onClick={this.changeChart} leftText="Polar" rightText="Radar" />
                             </div>
-                            <Chart data={cData} type={chartChoice} zoomLevel={zoomLevel} />
+                            <Chart data={cData} type={chartChoice} />
                         </div>
                     </div>
                 </section>
