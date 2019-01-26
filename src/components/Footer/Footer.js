@@ -2,6 +2,7 @@ import React from 'react';
 import './Footer.css';
 import wave from '../../images/svg-bgs/bg-wave-desktop.svg';
 import logo from '../../images/logo1alt.png';
+import Modal from '../Modal/Modal';
 import Contrib from './contributors';
 
 const Footer = ({ contrib }) => (
@@ -38,13 +39,15 @@ const Footer = ({ contrib }) => (
           <div className="credits col-md-7 col-xs-6">
             <h5 className="pt-2">Brought to you by</h5>
             <ul>
-              <a
+              {/* <a
                 href="https://www.udemy.com/the-complete-web-developer-zero-to-mastery/"
                 target="_blank"
                 rel="noopener noreferrer"
-              >
+              > */}
+              <Modal>
                 <li className="grow">Zero To Mastery</li>
-              </a>
+              </Modal>
+              {/* </a> */}
               <a href="https://github.com/anantankur" target="_blank" rel="noopener noreferrer">
                 <li className="grow">Ankur Anant</li>
               </a>
