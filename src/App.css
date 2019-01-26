@@ -142,21 +142,10 @@ h2 {
 
 .chartHolder {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    justify-content: center;
 }
 
-.chartHolder .toolbox {
-    justify-self: left;
-    align-self: center
-}
-
-.chartHolder .toolbox .zoomSlider {
-    display: grid;
-    grid-template-columns: 1fr 5fr 1fr;
-    align-items: center
-}
-
-.chartHolder .toolbox .zoomSlider>span {
-    font-size: 1.5em;
-    color: #2B2A2A;
+.toolbox {
+  max-height: 150px;
+  margin-bottom: 24px;
 }

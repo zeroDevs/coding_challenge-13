@@ -98,7 +98,7 @@ class App extends Component {
                     {
                         data: [gJobArray[cIndex], usJobArray[cIndex], supJobArray[cIndex], remJobArray[cIndex]],
                         label: currentSelection,
-                        backgroundColor: this.state.chartChoice==="Polar"?backgroundColors:backgroundColors[4],
+                        backgroundColor: this.state.chartChoice === "Polar" ? backgroundColors : backgroundColors[4],
                         borderColor: 'white',
                         hoverBorderColor: 'white',
                         hoverBackgroundColor: pointColors,
@@ -113,7 +113,7 @@ class App extends Component {
                 ],
                 labels: ['Global Job Demand', 'US Job Demand', 'Startup Job Demand', 'Remote Job Demand']
             }
-        },()=>{
+        }, () => {
             this.setState({
                 minimZoom: 100 - Math.ceil(Math.max.apply(null, this.state.cData.datasets[0].data))
             })
@@ -140,11 +140,11 @@ class App extends Component {
         const hearts = [];
 
         while (redHearts--) {
-            hearts.push(<img src={ Heart } alt="active love" height="25" key={ this.getKey() } />);
+            hearts.push(<img src={Heart} alt="active love" height="25" key={this.getKey()} />);
             maxHearts--;
         }
         while (maxHearts--)
-            hearts.push(<img src={ Heart } alt="inactive love" height="25" key={ this.getKey() } style={ { filter: "grayscale(1)" } } />)
+            hearts.push(<img src={Heart} alt="inactive love" height="25" key={this.getKey()} style={{ filter: "grayscale(1)" }} />)
 
         return hearts;
     }
@@ -154,53 +154,46 @@ class App extends Component {
     }
 
     changeChart = () => {
-        const choice =  this.state.chartChoice==="Polar"?"Radar":"Polar";
+        const choice = this.state.chartChoice === "Polar" ? "Radar" : "Polar";
         this.setState(
             {
                 chartChoice: choice
-            }, ()=>{this.getData(this.state.currentTopic)})
+            }, () => { this.getData(this.state.currentTopic) })
     }
 
     zoom = (event) => {
         this.setState({
-            zoomLevel: 100-Number(event.target.value)
+            zoomLevel: 100 - Number(event.target.value)
         });
     }
 
     render() {
         const { cData, rawData, currentTopic, contributors, chartChoice, zoomLevel, minimZoom } = this.state;
         return (
-            <div id="top" ref={ (ref) => this.scrollIcon = ref }>
-                <Header/>
-                <Navigation onNavClick={ this.onNavClick } currentCategoryIndex={ currentCatIndexGlobal } />
+            <div id="top" ref={(ref) => this.scrollIcon = ref}>
+                <Header />
+                <Navigation onNavClick={this.onNavClick} currentCategoryIndex={currentCatIndexGlobal} />
                 <section className="trends">
-                    <h2 className="title">Top 5 { chartTitle[currentCatIndexGlobal] }</h2>
+                    <h2 className="title">Top 5 {chartTitle[currentCatIndexGlobal]}</h2>
                     <div className="chart-container">
-                        <Rank langArray={ rawData.langArray } onTopicClick={ this.onTopicClick } checkbox={ currentTopic } />
+                        <Rank langArray={rawData.langArray} onTopicClick={this.onTopicClick} checkbox={currentTopic} />
                         <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, Google searches, and satisfaction surveys, etc..'>
                             <h5 className="pr-1">Developer Love:</h5>
-                            <h5 className="pl-1 anim-waving ">{ loveHearts }</h5>
+                            <h5 className="pl-1 anim-waving ">{loveHearts}</h5>
                         </Tooltip>
                         <div className="chartHolder">
-                            <Chart data={ cData } type={ chartChoice } zoomLevel={ zoomLevel } />
                             <div className="toolbox">
-                                <h5>Toolbox:</h5>
-                                <br/>
                                 <p>Chart type</p>
-                                <Switch onClick={ this.changeChart } leftText="Polar" rightText="Radar" />
-                                <br/>
-                                <p>Zoom</p>
-                                <div className="zoomSlider">
-                                    <span>-</span><input type="range" min="1" max={ minimZoom } step="1" onChange={ this.zoom }/><span>+</span>
-                                </div>
+                                <Switch onClick={this.changeChart} leftText="Polar" rightText="Radar" />
                             </div>
+                            <Chart data={cData} type={chartChoice} zoomLevel={zoomLevel} />
                         </div>
                     </div>
                 </section>
                 <Newsletter />
-                <Data loveFunction={ this.returnLove } />
-                <Suspense fallback={ <div>Loading...</div> }>
-                    <Footer contrib={ contributors } />
+                <Data loveFunction={this.returnLove} />
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Footer contrib={contributors} />
                 </Suspense>
             </div>
         );
