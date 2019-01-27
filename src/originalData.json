@@ -1,0 +1,193 @@
+[
+    [
+        {
+            "name": "React",
+            "devLove": 5,
+            "gJobDemand": 60642,
+            "usJobDemand": 27384,
+            "supJobDemand": 4061,
+            "remJobDemand": 1028
+
+        },
+        {
+            "name": "Angular",
+            "devLove": 3,
+            "gJobDemand": 62388,
+            "usJobDemand": 29863,
+            "supJobDemand": 2196,
+            "remJobDemand": 923
+
+        },
+        {
+            "name": "Redux",
+            "devLove": 4,
+            "gJobDemand": 15275,
+            "usJobDemand": 6177,
+            "supJobDemand": 1575,
+            "remJobDemand": 234
+
+        },
+        {
+            "name": "Vue",
+            "devLove": 5,
+            "gJobDemand": 10553,
+            "usJobDemand": 3549,
+            "supJobDemand": 570,
+            "remJobDemand": 181
+
+        },
+        {
+            "name": "Apollo+GraphQL",
+            "devLove": 5,
+            "gJobDemand": 4933,
+            "usJobDemand": 2510,
+            "supJobDemand": 497,
+            "remJobDemand": 116
+
+        }
+    ],
+
+    [
+        {
+            "name": "Android (Java, Kotlin)",
+            "devLove": 3,
+            "gJobDemand": 15647,
+            "usJobDemand": 16490,
+            "supJobDemand": 3241,
+            "remJobDemand": 556
+
+        },
+        {
+            "name": "iOS (Swift)",
+            "devLove": 3,
+            "gJobDemand": 19511,
+            "usJobDemand": 14684,
+            "supJobDemand": 3109,
+            "remJobDemand": 525
+
+        },
+        {
+            "name": "React Native",
+            "devLove": 4,
+            "gJobDemand": 9541,
+            "usJobDemand": 9675,
+            "supJobDemand": 1620,
+            "remJobDemand": 196
+
+        },
+        {
+            "name": "Cordova",
+            "devLove": 2,
+            "gJobDemand": 7937,
+            "usJobDemand": 2669,
+            "supJobDemand": 139,
+            "remJobDemand": 52
+
+        },
+        {
+            "name": "Flutter",
+            "devLove": 5,
+            "gJobDemand": 426,
+            "usJobDemand": 265,
+            "supJobDemand": 42,
+            "remJobDemand": 4
+
+        }
+    ],
+
+    [
+        {
+            "name": "JavaScript",
+            "devLove": 4,
+            "gJobDemand": 288856,
+            "usJobDemand": 99120,
+            "supJobDemand": 7892,
+            "remJobDemand": 3077
+
+        },
+        {
+            "name": "Java",
+            "devLove": 3,
+            "gJobDemand": 360508,
+            "usJobDemand": 157578,
+            "supJobDemand": 4177,
+            "remJobDemand": 4151
+
+        },
+        {
+            "name": "Python",
+            "devLove": 4,
+            "gJobDemand": 226599,
+            "usJobDemand": 126449,
+            "supJobDemand": 5439,
+            "remJobDemand": 4009
+
+        },
+        {
+            "name": "C++",
+            "devLove": 3,
+            "gJobDemand": 152440,
+            "usJobDemand": 84280,
+            "supJobDemand": 4132,
+            "remJobDemand": 1738
+
+        },
+        {
+            "name": "Go",
+            "devLove": 5,
+            "gJobDemand": 7617,
+            "usJobDemand": 7551,
+            "supJobDemand": 4578,
+            "remJobDemand": 170
+
+        }
+    ],
+
+    [
+        {
+            "name": "Node.js",
+            "devLove": 5,
+            "gJobDemand": 57979,
+            "usJobDemand": 18478,
+            "supJobDemand": 3371,
+            "remJobDemand": 722
+
+        },
+        {
+            "name": "Docker",
+            "devLove": 4,
+            "gJobDemand": 68203,
+            "usJobDemand": 31742,
+            "supJobDemand": 2034,
+            "remJobDemand": 1269
+
+        },
+        {
+            "name": "AWS",
+            "devLove": 3,
+            "gJobDemand": 93031,
+            "usJobDemand": 70982,
+            "supJobDemand": 4278,
+            "remJobDemand": 2922
+
+        },
+        {
+            "name": "PosrgreSQL",
+            "devLove": 5,
+            "gJobDemand": 32706,
+            "usJobDemand": 11633,
+            "supJobDemand": 1736,
+            "remJobDemand": 445
+
+        },
+        {
+            "name": "Redis",
+            "devLove": 5,
+            "gJobDemand": 14455,
+            "usJobDemand": 7773,
+            "supJobDemand": 1269,
+            "remJobDemand": 283
+
+        }
+    ]
+]

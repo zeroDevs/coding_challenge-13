@@ -8,6 +8,7 @@ import Newsletter from './components/Newsletter/Newsletter';
 import Data from './components/Data/Data';
 import Tooltip from './components/Tooltip/Tooltip';
 import chartData from './data.json';
+import newChartData from './originalData.json';
 import Heart from './images/svg-bgs/heart.svg';
 
 //dynamically import files
@@ -18,13 +19,24 @@ let currentCatIndexGlobal = 0;
 let loveHearts = [];
 
 const dataExtractor = (catIndex) => {
-    return chartData[catIndex].reduce((data, technology) => {
+    // console.log(newChartData[catIndex][0]);
+    let gSummer = 0, usSummer = 0, supSummer=0, remSummer=0;
+    newChartData[catIndex].reduce((d, t) => {
+        gSummer += t.gJobDemand;
+        usSummer += t.usJobDemand;
+        supSummer += t.supJobDemand;
+        remSummer += t.remJobDemand;
+        return 0;
+    })
+
+    return newChartData[catIndex].reduce((data, technology) => {
+
         data.langArray.push(technology.name);
         data.devLoveArray.push(technology.devLove);
-        data.gJobArray.push(technology.gJobDemand);
-        data.usJobArray.push(technology.usJobDemand);
-        data.supJobArray.push(technology.supJobDemand);
-        data.remJobArray.push(technology.remJobDemand);
+        data.gJobArray.push((technology.gJobDemand / gSummer) * 100);
+        data.usJobArray.push((technology.usJobDemand / usSummer) * 100);
+        data.supJobArray.push((technology.supJobDemand / supSummer) * 100);
+        data.remJobArray.push((technology.remJobDemand / remSummer) * 100);
         return data;
     }, {
             langArray: [],
@@ -55,7 +67,7 @@ class App extends Component {
         this.setLoveHearts(currentTopic, rawData);
     }
 
-    getKey(){
+    getKey() {
         return this.keyCount++;
     }
 
@@ -117,13 +129,12 @@ class App extends Component {
         let maxHearts = 5;
         const hearts = [];
 
-        while(redHearts--)
-        {
+        while (redHearts--) {
             hearts.push(<img src={Heart} alt="active love" height="25" key={this.getKey()} />);
             maxHearts--;
         }
-        while(maxHearts--)
-            hearts.push(<img src={Heart} alt="inactive love" height="25" key={this.getKey()} style={{filter: "grayscale(1)"}} />)
+        while (maxHearts--)
+            hearts.push(<img src={Heart} alt="inactive love" height="25" key={this.getKey()} style={{ filter: "grayscale(1)" }} />)
 
         return hearts;
     }
@@ -134,10 +145,10 @@ class App extends Component {
 
     handleScroll = () => {
         //"navbar navbar-expand-md navbar-light fixed-top"
-        if (window.scrollY <= 10 ) {
-            this.setState({headerClass: "navbar navbar-expand-lg navbar-light fixed-top"})
-        } else if (this.state.headerClass === "navbar navbar-expand-lg navbar-light fixed-top"){
-            this.setState({headerClass: "navbar navbar-expand-lg navbar-light fixed-top scroll smLogo"})
+        if (window.scrollY <= 10) {
+            this.setState({ headerClass: "navbar navbar-expand-lg navbar-light fixed-top" })
+        } else if (this.state.headerClass === "navbar navbar-expand-lg navbar-light fixed-top") {
+            this.setState({ headerClass: "navbar navbar-expand-lg navbar-light fixed-top scroll smLogo" })
         }
     }
 
@@ -146,22 +157,22 @@ class App extends Component {
         return (
             <div id="top" ref={(ref) => this.scrollIcon = ref}>
                 <Header headerClass={this.state.headerClass} />
-                <Navigation onNavClick={ this.onNavClick } currentCategoryIndex={ currentCatIndexGlobal } />
+                <Navigation onNavClick={this.onNavClick} currentCategoryIndex={currentCatIndexGlobal} />
                 <section className="trends">
                     <h2 className="title">Top 5</h2>
                     <div className="chart-container">
-                        <Rank langArray={ rawData.langArray } onTopicClick={ this.onTopicClick } checkbox={ currentTopic } />
+                        <Rank langArray={rawData.langArray} onTopicClick={this.onTopicClick} checkbox={currentTopic} />
                         <Tooltip tooltipText='This is a score out of 5 based on developer opinion, community size, downloads, Google searches, and satisfaction surveys, etc..'>
                             <h5 className="pr-1">Developer Love:</h5>
-                            <h5 className="pl-1 anim-waving ">{ loveHearts }</h5>
+                            <h5 className="pl-1 anim-waving ">{loveHearts}</h5>
                         </Tooltip>
-                        <Chart data={ cData } />
+                        <Chart data={cData} />
                     </div>
                 </section>
                 <Newsletter />
-                <Data loveFunction={ this.returnLove } />
+                <Data loveFunction={this.returnLove} />
                 <Suspense fallback={<div>Loading...</div>}>
-                    <Footer contrib={ contributors } />
+                    <Footer contrib={contributors} />
                 </Suspense>
             </div>
         );
