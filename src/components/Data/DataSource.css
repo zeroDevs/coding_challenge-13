@@ -114,6 +114,7 @@ div>span {
     0% {
         transform: translate(-50%, -100%) scale(0);
     }
+
     100% {
         transform: translate(-50%, -100%) scale(1);
     }
@@ -195,14 +196,17 @@ div>span {
         opacity: 0;
         transform: translateY(-3rem);
     }
+
     20% {
         opacity: 1;
         transform: translateY(-2rem);
     }
+
     80% {
         opacity: 1;
         transform: translateY(2rem);
     }
+
     100% {
         opacity: 0;
         transform: translateY(3rem);
@@ -214,14 +218,17 @@ div>span {
         opacity: 0;
         transform: translateY(-3rem);
     }
+
     20% {
         opacity: 1;
         transform: translateY(-2rem);
     }
+
     80% {
         opacity: 1;
         transform: translateY(2rem);
     }
+
     100% {
         opacity: 0;
         transform: translateY(3rem);
@@ -233,14 +240,17 @@ div>span {
         opacity: 0;
         transform: translateX(-4rem);
     }
+
     20% {
         opacity: 1;
         transform: translateX(-2rem);
     }
+
     80% {
         opacity: 1;
         transform: translateX(2rem);
     }
+
     100% {
         opacity: 0;
         transform: translateX(4rem);
@@ -252,14 +262,17 @@ div>span {
         opacity: 0;
         transform: translateX(-4rem);
     }
+
     20% {
         opacity: 1;
         transform: translateX(-2rem);
     }
+
     80% {
         opacity: 1;
         transform: translateX(2rem);
     }
+
     100% {
         opacity: 0;
         transform: translateX(4rem);
@@ -273,10 +286,12 @@ div>span {
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
     }
+
     50% {
         -webkit-transform: scale3d(1.05, 1.05, 1.05);
         transform: scale3d(1.05, 1.05, 1.05);
     }
+
     to {
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
@@ -288,10 +303,12 @@ div>span {
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
     }
+
     50% {
         -webkit-transform: scale3d(1.05, 1.05, 1.05);
         transform: scale3d(1.05, 1.05, 1.05);
     }
+
     to {
         -webkit-transform: scale3d(1, 1, 1);
         transform: scale3d(1, 1, 1);
@@ -321,24 +338,30 @@ div>span {
     .wrapper-data {
         flex-direction: column;
     }
+
     .container-grid {
         width: 100%;
     }
+
     .source-chart {
         margin-top: 0;
     }
+
     .arrowAnim-right {
         display: none;
     }
+
     .arrowAnim-down {
         padding: 5rem;
         display: flex;
         justify-content: center;
         align-items: center;
     }
+
     .wrapper-data {
         flex-direction: column;
     }
+
     .source-chart {
         margin-top: 0;
     }
@@ -381,27 +404,33 @@ div>span {
     .container-grid .tooltip1:hover .top {
         display: none;
     }
-    .trends {
-        width: 96vw;
-    }
+
+    /* .trends {
+        width: 100;
+    } */
     .trends p {
         margin-bottom: 1.5rem;
     }
+
     .title {
         font-size: 1.7rem;
     }
+
     .container-grid {
         width: auto;
         grid-gap: 1px;
         grid-template-columns: repeat(4, 70px);
     }
+
     .source-chart {
         width: auto;
     }
+
     .more {
         font-size: 3.8rem;
         color: #fff;
     }
+
     .mb-4 {
         margin: 1rem;
     }

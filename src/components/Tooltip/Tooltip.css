@@ -52,12 +52,14 @@
     display: flex;
     position: relative;
     justify-content: center;
+    z-index: 100;
 }
 
 @media only screen and (min-width: 568px) {
     .tooltipTrigger {
         flex-direction: row;
     }
+
     .tooltipTrigger.bottom {
         top: 50px;
         left: 0;

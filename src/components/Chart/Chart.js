@@ -20,8 +20,7 @@ const Chart = ({ data, type, zoomLevel }) => {
       stepSize: 5
     },
     pointLabels: {
-      fontColor: 'black',
-      fontSize: 16
+      display: false
     }
   }
   const options = {
@@ -32,20 +31,22 @@ const Chart = ({ data, type, zoomLevel }) => {
       padding: 10,
     },
     scale: scale,
-    legend: { display: false },
+    legend: {
+      display: false,
+    },
     tooltips: {
       callbacks: callbacks
     },
     style
   }
-  const chart = type==="Polar"?<Polar data={data} options={Object.assign({startAngle: -0.75*Math.PI},options)}/> : <Radar data={data} options={options}/>;
+  const chart = type === "Polar" ? <Polar data={ data } options={ Object.assign({ startAngle: -0.75 * Math.PI }, options) } /> : <Radar data={ data } options={ options } />;
   return (
     <div className="chart-wrapper">
-      {data === undefined ? (
+      { data === undefined ? (
         <h2>Loading...</h2>
       ) : (
-        chart
-      )}
+          chart
+        ) }
     </div>
   );
 };

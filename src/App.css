@@ -14,6 +14,7 @@
     .trends {
         padding: 10px;
     }
+
     .ranked-langs {
         padding-bottom: 1rem !important;
     }
@@ -126,9 +127,11 @@ h2 {
     0% {
         transform: translate(0, 0px);
     }
+
     50% {
         transform: translate(0, -0.5rem);
     }
+
     100% {
         transform: translate(0, 0px);
     }
@@ -136,7 +139,7 @@ h2 {
 
 .chartHolder {
     display: grid;
-    grid-template-areas: "switchbox switchbox" "chart zoombox";
+    grid-template-areas: "switchbox switchbox""chart zoombox";
     grid-template-columns: auto 125px;
     align-items: center;
 }
@@ -148,6 +151,7 @@ h2 {
 .switchbox {
     grid-area: switchbox;
     margin: 16px;
+    z-index: 99;
 }
 
 .chartbox {
@@ -210,4 +214,53 @@ h2 {
     border-color: var(--three);
     color: white;
     text-decoration: none;
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .trends {
+        width: 90%;
+    }
+
+    .chartHolder {
+        display: grid;
+        grid-template-areas: "switchbox""chart""zoombox";
+        grid-template-columns: 1fr;
+        align-items: center;
+    }
+
+    .zoombox {
+        justify-self: center;
+        transform: rotate(0);
+    }
+
+    .zoomSlider>div {
+        transform: rotate(0);
+        font-size: 2em;
+        color: #e24e42;
+        padding: 0 10px
+    }
+
+    .zoombox p {
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        font-size: 3rem;
+        align-self: center;
+        color: #e24e42;
+        margin-top: -15px;
+    }
+
+    .chartbox {
+        grid-area: chart;
+        width: 80vw;
+        justify-self: center;
+    }
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+    .trends {
+        width: 100%;
+    }
 }

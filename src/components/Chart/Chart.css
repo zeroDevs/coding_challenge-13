@@ -2,15 +2,16 @@
   height: 90vh;
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 991.98px) {
   .chart-wrapper {
-    height: 70vh;
+    height: 60vh;
   }
 }
 
 @media only screen and (max-width: 550px) {
   .chart-wrapper {
-    height: 53vh;
+    height: 50vh;
+
   }
 }
 
